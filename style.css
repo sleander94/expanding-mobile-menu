@@ -1,0 +1,88 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menuContainer {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  height: 64px;
+  width: 64px;
+}
+
+#mainMenuButton {
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+  width: 4rem;
+  height: 4rem;
+  padding-bottom: 4px;
+  border-radius: 50%;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(26, 19, 234);
+  border: 1px solid gray;
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+  outline: none;
+}
+
+#mainMenuButton:hover {
+  box-shadow: 0px 0px 20px black;
+}
+
+.optionContainer {
+  position: relative;
+  bottom: 140px;
+  left: 9px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 38px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 0rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.optionContainer.visible {
+  z-index: 1;
+}
+
+.optionContainer button {
+  background-color: rgb(26, 19, 234);
+  transform: scale(0);
+  padding: 10px;
+  width: 54px;
+  height: 0px;
+  font-size: 0rem;
+  border-radius: 50%;
+  transition: all 0.5s;
+  border: 1px solid grey;
+}
+
+.optionContainer button.visible {
+  font-size: 1.8rem;
+  height: 54px;
+  transform: scale(1);
+}
+
+img {
+  filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(208deg)
+    brightness(107%) contrast(101%);
+  max-height: 0px;
+  transition: all 0.5s;
+}
+
+img.visible {
+  max-height: 24px;
+}
